@@ -5,13 +5,8 @@ import json
 
 bot = telebot.TeleBot("948463735:AAEpz18IkUQBGX3wTtaqsEk9G7IxjQJhlrY")
 
-rTop = ["Top","top"]
 
-rJung = ["jugler","jung"]
-
-
-
-json_lol_keyboard = json.dumps({'keyboard': [["Top", "Support"]],
+json_lol_keyboard = json.dumps({'keyboard': [["o1", "o2"]],
 						   'one_time_keyboard': False,
 						   'resize_keyboard': True})
 
@@ -30,8 +25,9 @@ def send_welcome(message):
 
 @bot.message_handler(commands=['Alistar','alistar'])
 def send_welcome(message):
-	bot.send_message(message.chat.id,"Whitch position do you wanna play? (Recomendated position: Support, Top.)",reply_markup=json_lol_keyboard)
-	
+	bot.send_message(message.chat.id,"Whitch position do you wanna play? (Recomended position: Support, Top.)",reply_markup=json_lol_keyboard)
+
+
 
 
 
